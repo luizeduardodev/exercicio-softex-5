@@ -1,0 +1,240 @@
+Elabore um algoritmo que possa descobrir, através de perguntas e respostas, qual meio de transporte o usuário está pensando.
+O usuário deverá escolher uma das seguintes opções:
+
+- Trator
+- Moto
+- Bicicleta
+- Trem
+- Carro
+- Caminhão
+- Ônibus
+- Paraquedas
+- Balão
+- Avião
+- Helicóptero
+- Submarino
+- Barco
+- Navio
+- Lancha
+
+Para chegar ao resultado, só devem ser usadas perguntas que retornem "Sim" ou "Não".
+
+Exemplo:
+É terrestre? Sim.
+Cabe apenas uma pessoa? Sim.
+É pesado? Não.
+Tem pedal? Sim.
+Então, o transporte escolhido foi a bicicleta.
+
+Para chegar ao resultado de cada uma das opções, use o modelo ilustrado na imagem em anexo. 
+
+Realize essa atividade no WORD ou no Bloco de Notas, suba esse arquivo para algum repositório e compartilhe o link no campo ao lado para que outros desenvolvedores possam analisá-lo.
+
+RESPOSTA:
+
+Algoritmo "perguntasRespostas"
+
+Var
+   opcao: caractere;
+   pessoa: caractere;
+   pesado: caractere;
+   pedal: caractere;
+   capacete: caractere;
+   passageiro: caractere;
+   trilho: caractere;
+   pista: caractere;
+   alto: caractere;
+   carroceria: caractere;
+   cobrador: caractere;
+   leve: caractere;
+   
+   pular: caractere;
+   viajar: caractere;
+   devagar: caractere;
+   piloto: caractere;
+   asas: caractere;
+   vertical: caractere;
+   
+   agua: caractere;
+   navega: caractere;
+   vela: caractere;
+   motor: caractere;
+   altoNavio: caractere;
+   descoberto: caractere;
+
+Inicio
+      escreva("É terrestre? (Sim/Não) ")
+      leia(opcao)
+      
+      se (opcao = "sim") entao
+         escreva("Cabe apenas uma pessoa? (Sim/Não)")
+         leia(pessoa)
+         
+         se (pessoa = "sim") entao
+            escreva("É pesado? (Sim/Não)")
+            leia(pesado)
+            
+            se (pesado = "sim") entao
+               escreva("Trator")
+               
+               senao se (pesado = "nao") entao
+                     escreva("Tem pedal? (Sim/Não)")
+                     leia(pedal)
+                     
+                     se (pedal = "sim") entao
+                        escreva("Biclicleta")
+                     fimse
+               fimse
+               
+               senao se (pessoa = "nao") entao
+                     escreva("Usa capacete? (Sim/Não)")
+                     leia(capacete)
+                     
+                     se (capacete = "sim") entao
+                        escreva("Moto")
+                        
+                        senao se (capacete = "nao") entao
+                              escreva("Tem passageiro? (Sim/Não)")
+                              leia(passageiro)
+                              
+                              se (passageiro = "sim") entao
+                                 escreva("Usa trilho? (Sim/Não)")
+                                 leia(trilho)
+                                 
+                                 se (trilho = "sim") entao
+                                    escreva("Trem")
+                                    
+                                    senao se (trilho = "nao") entao
+                                          escreva("Anda na pista? (Sim/Não)")
+                                          leia(pista)
+                                          
+                                          se (pista = "sim") entao
+                                             escreva("É alto? (Sim/Não)")
+                                             leia(alto)
+                                             
+                                             se (alto = "sim") entao
+                                                escreva("Usa carroceria? (Sim/Não)")
+                                                leia(carroceria)
+                                                
+                                                se (carroceria = "sim") entao
+                                                   escreva("Caminhão")
+                                                   
+                                                   senao se (carroceria = "nao") entao
+                                                         escreva("Pode ter cobrador? (Sim/Não)")
+                                                         leia(cobrador)
+                                                         
+                                                         se (cobrador = "sim") entao
+                                                            escreva("ônibus")
+                                                         fimse
+                                                   fimse
+                                                
+                                                senao se (alto = "nao") entao
+                                                      escreva("É veiculo leve? (sim/não)")
+                                                      leia(leve)
+                                                      
+                                                      se (leve = "sim") entao
+                                                         escreva("Carro")
+                                                      fimse
+                                          fimse
+                                    fimse
+                              fimse
+                        fimse
+               fimse
+            fimse
+            
+            senao se (opcao = "nao") entao
+                  escreva("É aéreo? (sim/Não)")
+                  leia(opcao)
+                  
+                  se (opcao = "sim") entao
+                     escreva("Precisa pular? (sim/não)")
+                     leia(pular)
+                     
+                     se (pular = "sim") entao
+                        escreva("Asa delta")
+                        
+                        senao se (pular = "nao") entao
+                              escreva("Viaja dentro? (sim/Nao)")
+                              leia(viajar)
+                              
+                              se (viajar = "sim") entao
+                                 escreva("É devagar? (sim/Não)")
+                                 leia(devagar)
+                                 
+                                 se (devagar = "sim") entao
+                                    escreva("Balão")
+                                    
+                                    senao se (devagar = "nao") entao
+                                          escreva("Tem piloto? (Sim/Não)")
+                                          leia(piloto)
+                                          
+                                          se (piloto = "sim") entao
+                                             escreva("Possui asa fixas? (Sim/Nao)")
+                                             leia(asas)
+                                             
+                                             se (asas = "sim") entao
+                                                escreva("Avião")
+                                                
+                                                senao se (asas = "nao") entao
+                                                      escreva("Faz voo vertical? (sim/não)")
+                                                      leia(vertical)
+                                                      
+                                                      se (vertical = "sim") entao
+                                                         escreva("Helicóptero")
+                                                      fimse
+                                                fimse
+                                          fimse
+                                    fimse
+                              fimse
+                        fimse
+                        
+                        senao se (opcao = "nao") entao
+                              escreva("É aquático? ")
+                              leia(opcao)
+
+                              se (opcao = "sim") entao
+                                 escreva("É coberto d´água? (sim/não)")
+                                 leia(agua)
+                                 
+                                 se (agua = "sim") entao
+                                    escreva("Submarino")
+                                    
+                                    senao se (agua = "nao") entao
+                                          escreva("Navega na água? (sim/não)")
+                                          leia(navega)
+                                          
+                                          se (navega = "sim") entao
+                                             escreva("Possui vela? (sim/não)")
+                                             leia(vela)
+                                             
+                                             se (vela = "sim") entao
+                                                escreva("Barco")
+                                                
+                                                senao se (vela = "nao") entao
+                                                      escreva("Tem motor? (sim/não)")
+                                                      leia(motor)
+                                                      
+                                                      se (motor = "sim") entao
+                                                         escreva("É alto? (Sim/Nao)")
+                                                         leia(altoNavio)
+                                                         
+                                                         se (altoNavio = "sim") entao
+                                                            escreva("Navio")
+
+                                                            senao se (altoNavio = "nao") entao
+                                                                  escreva("Pode ser descoberto? (sim/não)")
+                                                                  leia(descoberto)
+                                                                  
+                                                                  se (descoberto = "sim") entao
+                                                                     escreva("Lancha")
+                                                                  fimse
+                                                            fimse
+                                                      fimse
+                                                fimse
+                                          fimse
+                                    fimse
+                              fimse
+                        fimse
+                        
+                  fimse
+Fimalgoritmo
